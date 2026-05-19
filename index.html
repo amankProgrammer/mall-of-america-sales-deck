@@ -1,0 +1,781 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Mall of America -- Interactive Sales Deck for Retail Tenants, Sponsors & Event Partners. America's largest destination mall." />
+  <title>Mall of America | Commercial Sales Deck</title>
+  <link rel="stylesheet" href="css/main.css?v=9" />
+  <link rel="stylesheet" href="css/nav.css?v=9" />
+  <link rel="stylesheet" href="css/sections.css?v=9" />
+</head>
+<body>
+
+<!-- ── INTRO OVERLAY ────────────────────────────────────────── -->
+<div id="intro-overlay">
+  <video id="intro-video" autoplay muted playsinline loop>
+    <source src="assets/videos/intro.mp4" type="video/mp4" />
+  </video>
+  <div id="intro-content">
+    <div id="intro-logo">
+      <span class="intro-logo-mark">MOA<span>.</span></span>
+      <span class="intro-logo-sub">Mall of America</span>
+    </div>
+    <button id="intro-enter-btn" onclick="enterSite()">
+      <span>Enter Now</span>
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+        <line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/>
+      </svg>
+    </button>
+  </div>
+</div>
+
+<!-- ── Progress Bar ─────────────────────────────────────────── -->
+<div id="nav-progress" class="nav-progress"></div>
+
+<!-- Navigation -->
+<nav id="nav">
+  <div class="nav-inner">
+    <div class="nav-logo" onclick="window.scrollTo({top:0,behavior:'smooth'})">
+      <span class="nav-logo__mark">MOA<span>.</span></span>
+      <span class="nav-logo__sub">Mall of America</span>
+    </div>
+    <ul class="nav-links">
+      <li><a href="#why">Overview</a></li>
+      <li><a href="#by-the-numbers">Facts</a></li>
+      <li><a href="#retail">Retail</a></li>
+      <li><a href="#dining">Dining</a></li>
+      <li><a href="#entertainment">Entertainment</a></li>
+      <li><a href="#events">Events</a></li>
+      <li><a href="#sponsorship">Sponsorship</a></li>
+      <li><a href="#leasing">Leasing</a></li>
+    </ul>
+    <div class="nav-cta">
+      <a href="#contact" class="btn btn--outline">Contact Us</a>
+      <a href="#leasing" class="btn btn--primary">Get Started</a>
+    </div>
+    <button class="nav-hamburger" id="nav-hamburger" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</nav>
+
+<!-- Mobile Menu -->
+<div class="nav-mobile" id="nav-mobile">
+  <ul>
+    <li><a href="#why">Overview</a></li>
+    <li><a href="#by-the-numbers">By The Numbers</a></li>
+    <li><a href="#retail">Retail</a></li>
+    <li><a href="#dining">Dining</a></li>
+    <li><a href="#entertainment">Entertainment</a></li>
+    <li><a href="#events">Events</a></li>
+    <li><a href="#sponsorship">Sponsorship</a></li>
+    <li><a href="#leasing">Leasing</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+</div>
+
+<!-- HERO -->
+<section id="hero">
+  <canvas id="particles-canvas" style="position:absolute;inset:0;z-index:1;pointer-events:none;"></canvas>
+  <div class="hero-bg">
+    <video autoplay muted loop playsinline poster="assets/images/hero_atrium.png">
+      <source src="assets/videos/droneshot.mp4" type="video/mp4" />
+    </video>
+  </div>
+  <div class="hero-content">
+    <div class="hero-eyebrow">Bloomington, Minnesota &bull; Est. 1992</div>
+    <h1 class="hero-title">America's<br /><em>Destination</em></h1>
+    <p class="hero-subtitle">The most visited destination in the United States. 40&nbsp;million annual visitors. 520+ stores. 5.6&nbsp;million sq&nbsp;ft of pure possibility.</p>
+    <div class="hero-actions">
+      <a href="#why" class="btn btn--primary">Explore the Property</a>
+      <a href="#contact" class="btn btn--outline">Schedule a Tour</a>
+    </div>
+  </div>
+  <div class="hero-stats">
+    <div class="hero-stat"><span class="num" data-count="40" data-suffix="M">0</span><span class="lbl">Annual Visitors</span></div>
+    <div class="hero-stat"><span class="num" data-count="5.6" data-suffix="M sqft" data-decimals="1">0</span><span class="lbl">Total Area</span></div>
+    <div class="hero-stat"><span class="num" data-count="520" data-suffix="+">0</span><span class="lbl">Retail Stores</span></div>
+    <div class="hero-stat"><span class="num" data-count="12550">0</span><span class="lbl">Parking Spots</span></div>
+    <div class="hero-stat"><span class="num" data-count="70" data-suffix="&#176;F">0</span><span class="lbl">Year-Round Temp</span></div>
+  </div>
+  <div class="hero-scroll">
+    <span>Scroll</span>
+    <div class="hero-scroll-line"></div>
+  </div>
+</section>
+
+<!-- ── WHY MALL OF AMERICA ────────────────────────────────────────── -->
+<section id="why" class="section">
+  <div class="container">
+    <div class="why-grid">
+      <div class="reveal-left">
+        <div class="why-image-wrap">
+          <img src="assets/images/aerial_exterior.png" alt="Mall of America Aerial View" />
+          <div class="why-badge">
+            <div class="num">#1</div>
+            <div class="txt">Most Visited US Destination</div>
+          </div>
+        </div>
+      </div>
+      <div class="reveal-right">
+        <div class="section-label">
+          <span class="caption">Why Mall of America</span>
+        </div>
+        <h2 class="display-md mb-6">More Than a Mall.<br /><em>A Platform.</em></h2>
+        <p class="body-lg mb-8">Mall of America isn't just retail square footage -- it's a cultural destination attracting more annual visitors than Disney World and the Grand Canyon combined. For brands, it's the highest-traffic commercial address in North America.</p>
+        <div class="gold-divider"></div>
+        <div class="why-stats-mini">
+          <div class="why-stat-mini reveal delay-1">
+            <div class="n" data-count="40" data-suffix="M+">0</div>
+            <div class="l">Visitors / Year</div>
+          </div>
+          <div class="why-stat-mini reveal delay-2">
+            <div class="n" data-count="32" data-suffix="M">0</div>
+            <div class="l">Within 1-Day Drive</div>
+          </div>
+          <div class="why-stat-mini reveal delay-3">
+            <div class="n" data-count="3" data-suffix="+">0</div>
+            <div class="l">Hrs Avg Dwell Time</div>
+          </div>
+          <div class="why-stat-mini reveal delay-4">
+            <div class="n" data-count="40" data-suffix="%">0</div>
+            <div class="l">Out-of-State Visitors</div>
+          </div>
+        </div>
+        <div class="flex gap-4 mt-8">
+          <a href="#retail" class="btn btn--primary">View Opportunities</a>
+          <a href="#contact" class="btn btn--outline">Request Deck</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── KEY STATS BAR ────────────────────────────────────────── -->
+<section id="stats-bar">
+  <div class="container">
+    <div class="stats-grid">
+      <div class="stat-card reveal delay-1">
+        <span class="stat-number" data-count="500" data-suffix="+">0</span>
+        <span class="stat-label">Retail Stores</span>
+        <div class="stat-sub">Fashion, Luxury, Tech & More</div>
+      </div>
+      <div class="stat-card reveal delay-2">
+        <span class="stat-number" data-count="50" data-suffix="+">0</span>
+        <span class="stat-label">Dining Options</span>
+        <div class="stat-sub">Fine Dining to Quick Service</div>
+      </div>
+      <div class="stat-card reveal delay-3">
+        <span class="stat-number" data-count="27">0</span>
+        <span class="stat-label">Rides &amp; Attractions</span>
+        <div class="stat-sub">Nickelodeon Universe Theme Park</div>
+      </div>
+      <div class="stat-card reveal delay-4">
+        <span class="stat-number" data-count="12550">0</span>
+        <span class="stat-label">Parking Spots</span>
+        <div class="stat-sub">Dedicated On-Site Parking</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- BY THE NUMBERS -->
+<section id="by-the-numbers" class="section btn-section">
+  <div class="container">
+    <div class="text-center reveal mb-16">
+      <div class="section-label" style="justify-content:center;">
+        <span class="caption">By The Numbers</span>
+      </div>
+      <h2 class="display-md mb-6">Built at a Scale<br /><em>Like No Other.</em></h2>
+      <p class="body-lg" style="max-width:620px;margin:0 auto;">Every figure here represents a commercial opportunity. These are not just facts &mdash; they are the proof points behind the most powerful retail address in North America.</p>
+    </div>
+
+    <div class="facts-ticker-wrap reveal">
+
+      <!-- Row 1: moves right → left -->
+      <div class="facts-ticker">
+        <div class="facts-track">
+          <div class="facts-item">
+            <span class="facts-num" data-count="40" data-suffix="M">0</span>
+            <span class="facts-label">Annual Visitors</span>
+          </div>
+          <div class="facts-sep">/</div>
+          <div class="facts-item">
+            <span class="facts-num" data-count="5.6" data-suffix="M sqft" data-decimals="1">0</span>
+            <span class="facts-label">Total Scale</span>
+          </div>
+          <div class="facts-sep">/</div>
+          <div class="facts-item">
+            <span class="facts-num" data-count="520" data-suffix="+">0</span>
+            <span class="facts-label">Retail Stores</span>
+          </div>
+          <div class="facts-sep">/</div>
+          <div class="facts-item">
+            <span class="facts-num" data-count="650" data-prefix="$" data-suffix="M+">0</span>
+            <span class="facts-label">Construction Cost</span>
+          </div>
+          <div class="facts-sep">/</div>
+          <div class="facts-item">
+            <span class="facts-num" data-count="50" data-suffix="+">0</span>
+            <span class="facts-label">Restaurants</span>
+          </div>
+          <!-- Duplicate for seamless loop -->
+          <div class="facts-item">
+            <span class="facts-num">40M</span>
+            <span class="facts-label">Annual Visitors</span>
+          </div>
+          <div class="facts-sep">/</div>
+          <div class="facts-item">
+            <span class="facts-num">5.6M sqft</span>
+            <span class="facts-label">Total Scale</span>
+          </div>
+          <div class="facts-sep">/</div>
+          <div class="facts-item">
+            <span class="facts-num">520+</span>
+            <span class="facts-label">Retail Stores</span>
+          </div>
+          <div class="facts-sep">/</div>
+          <div class="facts-item">
+            <span class="facts-num">$650M+</span>
+            <span class="facts-label">Construction Cost</span>
+          </div>
+          <div class="facts-sep">/</div>
+          <div class="facts-item">
+            <span class="facts-num">50+</span>
+            <span class="facts-label">Restaurants</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Row 2: moves left → right (reverse) -->
+      <div class="facts-ticker facts-ticker--reverse">
+        <div class="facts-track">
+          <div class="facts-item facts-item--outline">
+            <span class="facts-num" data-count="27">0</span>
+            <span class="facts-label">Theme Park Rides</span>
+          </div>
+          <div class="facts-sep">/</div>
+          <div class="facts-item facts-item--outline">
+            <span class="facts-num" data-count="1.2" data-suffix="M gal" data-decimals="1">0</span>
+            <span class="facts-label">SEA LIFE Aquarium</span>
+          </div>
+          <div class="facts-sep">/</div>
+          <div class="facts-item facts-item--outline">
+            <span class="facts-num" data-count="12550">0</span>
+            <span class="facts-label">Parking Spots</span>
+          </div>
+          <div class="facts-sep">/</div>
+          <div class="facts-item facts-item--outline">
+            <span class="facts-num" data-count="70" data-suffix="&#176;F">0</span>
+            <span class="facts-label">Year-Round Temp</span>
+          </div>
+          <div class="facts-sep">/</div>
+          <div class="facts-item facts-item--outline">
+            <span class="facts-num">55425</span>
+            <span class="facts-label">Exclusive ZIP Code</span>
+          </div>
+          <!-- Duplicate for seamless loop -->
+          <div class="facts-item facts-item--outline">
+            <span class="facts-num">27</span>
+            <span class="facts-label">Theme Park Rides</span>
+          </div>
+          <div class="facts-sep">/</div>
+          <div class="facts-item facts-item--outline">
+            <span class="facts-num">1.2M gal</span>
+            <span class="facts-label">SEA LIFE Aquarium</span>
+          </div>
+          <div class="facts-sep">/</div>
+          <div class="facts-item facts-item--outline">
+            <span class="facts-num">12,550</span>
+            <span class="facts-label">Parking Spots</span>
+          </div>
+          <div class="facts-sep">/</div>
+          <div class="facts-item facts-item--outline">
+            <span class="facts-num">70°F</span>
+            <span class="facts-label">Year-Round Temp</span>
+          </div>
+          <div class="facts-sep">/</div>
+          <div class="facts-item facts-item--outline">
+            <span class="facts-num">55425</span>
+            <span class="facts-label">Exclusive ZIP Code</span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ── INFINITE MARQUEE ────────────────────────────────────────── -->
+<div class="marquee-section reveal">
+  <div class="marquee-container">
+    <div class="marquee-content">
+      <span>ZARA</span><span class="dot">&bull;</span>
+      <span>APPLE</span><span class="dot">&bull;</span>
+      <span>GUCCI</span><span class="dot">&bull;</span>
+      <span>LULULEMON</span><span class="dot">&bull;</span>
+      <span>NIKE</span><span class="dot">&bull;</span>
+      <span>ROLEX</span><span class="dot">&bull;</span>
+      <span>ARITZIA</span><span class="dot">&bull;</span>
+      <span>HERMÈS</span><span class="dot">&bull;</span>
+    </div>
+    <div class="marquee-content" aria-hidden="true">
+      <span>ZARA</span><span class="dot">&bull;</span>
+      <span>APPLE</span><span class="dot">&bull;</span>
+      <span>GUCCI</span><span class="dot">&bull;</span>
+      <span>LULULEMON</span><span class="dot">&bull;</span>
+      <span>NIKE</span><span class="dot">&bull;</span>
+      <span>ROLEX</span><span class="dot">&bull;</span>
+      <span>ARITZIA</span><span class="dot">&bull;</span>
+      <span>HERMÈS</span><span class="dot">&bull;</span>
+    </div>
+  </div>
+</div>
+
+<!-- ── INTERACTIVE FLOOR PLAN ───────────────────────────────────── -->
+<section id="floor-plan" class="section">
+  <div class="container">
+    <div class="text-center reveal mb-12">
+      <div class="section-label" style="justify-content:center;">
+        <span class="caption">Property Layout</span>
+      </div>
+      <h2 class="display-sm mb-4">Strategic<br /><em>Zoning.</em></h2>
+      <p class="body-lg" style="max-width:600px;margin:0 auto;">Explore the distinct anchors and categories spanning our four massive levels.</p>
+    </div>
+    
+    <div class="fp-container reveal">
+      <div class="fp-sidebar">
+        <button class="fp-tab active" data-level="1">Level 1 <span>Flagships &amp; Luxury</span></button>
+        <button class="fp-tab" data-level="2">Level 2 <span>Apparel &amp; Lifestyle</span></button>
+        <button class="fp-tab" data-level="3">Level 3 <span>Dining &amp; Culinary</span></button>
+        <button class="fp-tab" data-level="4">Level 4 <span>Cinema &amp; Entertainment</span></button>
+      </div>
+      <div class="fp-display">
+        <div class="fp-level active" id="level-1">
+          <div class="fp-graphic">
+            <img src="assets/images/luxury_retail.png" alt="Level 1 Flagships" loading="lazy" class="parallax-img" />
+          </div>
+          <div class="fp-info">
+            <h3 style="color:var(--clr-gold);margin-bottom:8px;font-family:var(--font-heading);">Level 1: The Foundation</h3>
+            <p style="color:var(--clr-grey-300);">High-visibility zones anchoring the property's primary entrances. Perfect for luxury boutiques, tech flagships, and international brands.</p>
+          </div>
+        </div>
+        
+        <div class="fp-level" id="level-2">
+          <div class="fp-graphic">
+            <img src="assets/images/hero_atrium.png" alt="Level 2 Apparel" loading="lazy" class="parallax-img" />
+          </div>
+          <div class="fp-info">
+            <h3 style="color:var(--clr-gold);margin-bottom:8px;font-family:var(--font-heading);">Level 2: Lifestyle Core</h3>
+            <p style="color:var(--clr-grey-300);">High-volume apparel, activewear, and emerging digitally-native brands moving to brick-and-mortar storefronts.</p>
+          </div>
+        </div>
+
+        <div class="fp-level" id="level-3">
+          <div class="fp-graphic">
+            <img src="assets/images/dining_lifestyle.png" alt="Level 3 Dining" loading="lazy" class="parallax-img" />
+          </div>
+          <div class="fp-info">
+            <h3 style="color:var(--clr-gold);margin-bottom:8px;font-family:var(--font-heading);">Level 3: Culinary &amp; Taste</h3>
+            <p style="color:var(--clr-grey-300);">From fine dining to experiential food halls, Level 3 captures the hungry masses spanning all demographics and tastes.</p>
+          </div>
+        </div>
+
+        <div class="fp-level" id="level-4">
+          <div class="fp-graphic">
+            <img src="assets/images/event_concert.png" alt="Level 4 Entertainment" loading="lazy" class="parallax-img" />
+          </div>
+          <div class="fp-info">
+            <h3 style="color:var(--clr-gold);margin-bottom:8px;font-family:var(--font-heading);">Level 4: Entertainment &amp; Nightlife</h3>
+            <p style="color:var(--clr-grey-300);">The late-night engine of MOA. VIP cinemas, comedy clubs, and experiential entertainment venues.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- RETAIL -->
+<section id="retail" class="section">
+  <div class="container">
+    <div class="text-center mb-16 reveal">
+      <div class="section-label" style="justify-content:center;">
+        <span class="caption">Retail Environment</span>
+      </div>
+      <h2 class="display-md mb-6">500+ Stores.<br /><em>One Destination.</em></h2>
+      <p class="body-lg" style="max-width:620px;margin:0 auto;">From global luxury flagships to high-street staples, Mall of America offers retail categories that drive foot traffic and deliver unmatched visibility to every tenant.</p>
+    </div>
+    <div class="retail-categories reveal">
+      <div class="retail-cat">
+        <img src="assets/images/luxury_retail.png" alt="Luxury Retail" loading="lazy" class="parallax-img" />
+        <div class="retail-cat__overlay">
+          <div class="retail-cat__tag">Premium Wing</div>
+          <div class="retail-cat__title">Luxury &amp; Designer</div>
+          <div class="retail-cat__desc">Home to the most sought-after luxury brands in the Midwest. Your flagship deserves this address.</div>
+        </div>
+      </div>
+      <div class="retail-cat">
+        <img src="assets/images/hero_atrium.png" alt="Retail Atrium" loading="lazy" />
+        <div class="retail-cat__overlay">
+          <div class="retail-cat__tag">Main Corridors</div>
+          <div class="retail-cat__title">Fashion &amp; Lifestyle</div>
+          <div class="retail-cat__desc">High-traffic corridors with millions of engaged shoppers. Maximum exposure, maximum conversion.</div>
+        </div>
+      </div>
+      <div class="retail-cat">
+        <img src="assets/images/leasing_popup.png" alt="Pop-Up Retail" loading="lazy" />
+        <div class="retail-cat__overlay">
+          <div class="retail-cat__tag">Flexible Spaces</div>
+          <div class="retail-cat__title">Pop-Up &amp; Experiential</div>
+          <div class="retail-cat__desc">Launch campaigns, test markets, and create moments that generate media and social buzz.</div>
+        </div>
+      </div>
+    </div>
+    <div class="retail-tenants reveal mt-12">
+      <p class="caption mb-6">Current &amp; Past Tenants</p>
+      <div class="tenant-logos">
+        <span class="tenant-logo-item">Apple</span><span class="tenant-logo-item">Nike</span>
+        <span class="tenant-logo-item">Louis Vuitton</span><span class="tenant-logo-item">H&amp;M</span>
+        <span class="tenant-logo-item">Zara</span><span class="tenant-logo-item">Lululemon</span>
+        <span class="tenant-logo-item">Coach</span><span class="tenant-logo-item">Nordstrom</span>
+        <span class="tenant-logo-item">Microsoft</span><span class="tenant-logo-item">Sephora</span>
+        <span class="tenant-logo-item">Anthropologie</span><span class="tenant-logo-item">Polo Ralph Lauren</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- -- DINING ------------------------------------------------- -->
+<section id="dining" class="section">
+  <div class="container">
+    <div class="reveal">
+      <div class="section-label"><span class="caption">Dining &amp; Lifestyle</span></div>
+      <h2 class="display-md mb-6">Dining as a<br /><em>Destination Draw</em></h2>
+      <p class="body-lg mb-12" style="max-width:580px;">50+ dining experiences turn a shopping trip into a full-day occasion. Food drives dwell time and repeat visits.</p>
+    </div>
+    <div class="dining-grid">
+      <div class="dining-main reveal-left">
+        <img src="assets/images/dining_lifestyle.png" alt="Premium Dining" loading="lazy" />
+        <div class="dining-overlay">
+          <div class="caption mb-4">Signature Dining</div>
+          <h3 class="heading-lg">A Culinary Destination</h3>
+          <p style="font-size:0.9rem;color:var(--clr-grey-300);margin-top:8px;">Fine dining, vibrant bars, and international cuisine under one roof.</p>
+        </div>
+      </div>
+      <div class="dining-mini reveal delay-1"><img src="assets/images/aerial_exterior.png" alt="Food Court" loading="lazy" /><div class="dining-overlay"><div class="caption">50+ Options</div><h4 class="heading-md" style="font-size:1.1rem;">Every Craving Covered</h4></div></div>
+      <div class="dining-mini reveal delay-2"><img src="assets/images/theme_park.png" alt="Lifestyle" loading="lazy" /><div class="dining-overlay"><div class="caption">Social Dining</div><h4 class="heading-md" style="font-size:1.1rem;">Lifestyle Moments</h4></div></div>
+      <div class="dining-mini reveal delay-3"><img src="assets/images/sponsorship_activation.png" alt="Event Dining" loading="lazy" /><div class="dining-overlay"><div class="caption">Event Dining</div><h4 class="heading-md" style="font-size:1.1rem;">Private &amp; Catered</h4></div></div>
+      <div class="dining-mini reveal delay-4"><img src="assets/images/luxury_retail.png" alt="Premium F&B" loading="lazy" /><div class="dining-overlay"><div class="caption">Premium F&amp;B</div><h4 class="heading-md" style="font-size:1.1rem;">Elevated Concepts</h4></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- -- ENTERTAINMENT ------------------------------------------- -->
+<section id="entertainment" class="section">
+  <div class="container">
+    <div class="reveal">
+      <div class="section-label"><span class="caption">Entertainment &amp; Attractions</span></div>
+      <h2 class="display-md mb-6">The World's Largest<br /><em>Indoor Theme Park</em></h2>
+      <p class="body-lg mb-12" style="max-width:600px;">Nickelodeon Universe, SEA LIFE Aquarium, and 20+ additional attractions turn every visit into an unforgettable experience.</p>
+    </div>
+    <div class="entertainment-hero reveal">
+      <img src="assets/images/theme_park.png" alt="Nickelodeon Universe" loading="lazy" />
+      <div class="entertainment-hero__content">
+        <div class="caption mb-4">Nickelodeon Universe</div>
+        <h3 class="display-md" style="color:#fff;">7 Acres. 30+ Rides.<br /><em>Zero Admission.</em></h3>
+        <p style="font-size:1rem;color:var(--clr-grey-300);margin-top:12px;max-width:500px;">The world's largest indoor theme park -- free to enter, making it the single greatest traffic driver in American retail.</p>
+      </div>
+    </div>
+    <div class="attraction-grid mt-12">
+      <div class="attraction-card reveal delay-1"><div class="icon">&#9650;</div><h3>Nickelodeon Universe</h3><p>7-acre indoor theme park with 30+ rides. Zero admission -- unlimited foot traffic for every tenant.</p></div>
+      <div class="attraction-card reveal delay-2"><div class="icon">&#9670;</div><h3>SEA LIFE Minnesota</h3><p>10,000+ sea creatures, shark tunnels, and interactive touch pools drawing families year-round.</p></div>
+      <div class="attraction-card reveal delay-3"><div class="icon">&#9654;</div><h3>FlyOver America</h3><p>Cinematic flight simulation delivering awe-inspiring aerial tours -- a marquee brand partner opportunity.</p></div>
+      <div class="attraction-card reveal delay-1"><div class="icon">&#9675;</div><h3>Bowling &amp; Gaming</h3><p>Crayola Experience, bowling, mini golf, escape rooms, and live entertainment keep guests for hours.</p></div>
+      <div class="attraction-card reveal delay-2"><div class="icon">&#9733;</div><h3>Cinema &amp; Live Shows</h3><p>State-of-the-art cinema plus a live performance stage for celebrity appearances and brand moments.</p></div>
+      <div class="attraction-card reveal delay-3"><div class="icon">&#9671;</div><h3>Experiential Retail</h3><p>Immersive store formats and flagship experience centers that blur shopping and entertainment.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- -- AQUARIUM ------------------------------------------------- -->
+<section id="aquarium" class="section">
+  <div class="container">
+    <div class="aquarium-split">
+      <div class="reveal-left"><img src="assets/images/aquarium.png" alt="SEA LIFE Aquarium" loading="lazy" /></div>
+      <div class="reveal-right">
+        <div class="section-label"><span class="caption">SEA LIFE Minnesota Aquarium</span></div>
+        <h2 class="display-md mb-6">An Ocean<br /><em>Inside a Mall</em></h2>
+        <p class="body-lg mb-8">10,000 sea creatures. Walk-through shark tunnels. SEA LIFE Minnesota delivers a world-class attraction that drives incremental visits and positions MOA as a true destination.</p>
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-bottom:32px;">
+          <div class="why-stat-mini"><div class="n">10K+</div><div class="l">Sea Creatures</div></div>
+          <div class="why-stat-mini"><div class="n">300K+</div><div class="l">Annual Visitors</div></div>
+          <div class="why-stat-mini"><div class="n">35+</div><div class="l">Exhibits</div></div>
+          <div class="why-stat-mini"><div class="n">4.7&#9733;</div><div class="l">Guest Rating</div></div>
+        </div>
+        <a href="#contact" class="btn btn--primary">Explore Partnership Opportunities</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+<!-- -- EVENTS ------------------------------------------------- -->
+<section id="events" class="section">
+  <div class="container">
+    <div class="text-center reveal mb-16">
+      <div class="section-label" style="justify-content:center;"><span class="caption">Events &amp; Platform</span></div>
+      <h2 class="display-md mb-6">A Global Stage.<br /><em>Your Event Here.</em></h2>
+      <p class="body-lg" style="max-width:620px;margin:0 auto;">400+ events per year. 40 million witnesses. Mall of America is not just a venue -- it's a media platform, a cultural moment, and a commercial accelerator rolled into one.</p>
+    </div>
+    <div class="events-split">
+      <div class="event-image-col reveal-left">
+        <img src="assets/images/event_concert.png" alt="Concert Event at MOA" loading="lazy" />
+      </div>
+      <div class="reveal-right">
+        <div class="section-label"><span class="caption">Event Capabilities</span></div>
+        <h3 class="heading-lg mb-6">Everything From Concerts to Corporate.</h3>
+        <div class="event-types">
+          <div class="event-type"><div class="ico">&#9836;</div><h4>Concerts &amp; Live Music</h4><p>2,500+ capacity rotunda events</p></div>
+          <div class="event-type"><div class="ico">&#9733;</div><h4>Product Launches</h4><p>Millions of eyes on Day 1</p></div>
+          <div class="event-type"><div class="ico">&#9632;</div><h4>Corporate Events</h4><p>Convention &amp; meeting spaces</p></div>
+          <div class="event-type"><div class="ico">?</div><h4>Brand Activations</h4><p>Immersive consumer experiences</p></div>
+          <div class="event-type"><div class="ico">&#9650;</div><h4>Expositions</h4><p>Trade shows &amp; exhibitions</p></div>
+          <div class="event-type"><div class="ico">&#9654;</div><h4>Media &amp; Press</h4><p>Celebrity appearances &amp; TV</p></div>
+        </div>
+        <div class="venue-specs">
+          <div class="spec-row"><span class="key">Rotunda Capacity</span><span class="val">2,500+ guests</span></div>
+          <div class="spec-row"><span class="key">Event Spaces</span><span class="val">14 dedicated venues</span></div>
+          <div class="spec-row"><span class="key">Sq Ft Available</span><span class="val">Up to 100,000 sqft</span></div>
+          <div class="spec-row"><span class="key">A/V Production</span><span class="val">Full in-house team</span></div>
+          <div class="spec-row"><span class="key">Annual Events</span><span class="val">400+ per year</span></div>
+        </div>
+        <div class="flex gap-4 mt-8">
+          <a href="#contact" class="btn btn--primary">Book a Venue</a>
+          <a href="#contact" class="btn btn--outline">View Event Portfolio</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- -- SPONSORSHIP --------------------------------------------- -->
+<section id="sponsorship" class="section">
+  <div class="container">
+    <div class="reveal">
+      <div class="section-label"><span class="caption">Sponsorship &amp; Brand Partnerships</span></div>
+      <h2 class="display-md mb-6">Your Brand.<br /><em>40 Million Witnesses.</em></h2>
+      <p class="body-lg mb-12" style="max-width:620px;">Partner with Mall of America to reach the most diverse, high-intent consumer audience in North America -- across physical, digital, and experiential touchpoints.</p>
+    </div>
+    <div class="sponsorship-image reveal">
+      <img src="assets/images/sponsorship_activation.png" alt="Brand Activation at MOA" loading="lazy" />
+    </div>
+    <div class="tier-grid">
+      <div class="tier-card tier-card--platinum reveal delay-1">
+        <div class="tier-icon">&#10022;</div>
+        <div class="tier-name">Platinum</div>
+        <div class="tier-price">Premier Partnership</div>
+        <ul class="tier-features">
+          <li>Naming rights to a signature venue</li>
+          <li>Year-round physical activation space</li>
+          <li>Full digital media suite (app, web, social)</li>
+          <li>Exclusive event hosting priority</li>
+          <li>Co-branded seasonal campaigns</li>
+          <li>Dedicated account team</li>
+        </ul>
+        <a href="#contact" class="btn btn--primary mt-8" style="width:100%;justify-content:center;">Contact Us</a>
+      </div>
+      <div class="tier-card tier-card--gold reveal delay-2">
+        <div class="tier-icon">&#9733;</div>
+        <div class="tier-name">Gold</div>
+        <div class="tier-price">Signature Partnership</div>
+        <ul class="tier-features">
+          <li>Branded activation zones (seasonal)</li>
+          <li>Digital advertising placements</li>
+          <li>Event sponsorship packages</li>
+          <li>Social media amplification</li>
+          <li>Consumer data insights</li>
+        </ul>
+        <a href="#contact" class="btn btn--ghost mt-8" style="width:100%;justify-content:center;">Contact Us</a>
+      </div>
+      <div class="tier-card tier-card--silver reveal delay-3">
+        <div class="tier-icon">&#9734;</div>
+        <div class="tier-name">Silver</div>
+        <div class="tier-price">Emerging Partnership</div>
+        <ul class="tier-features">
+          <li>Pop-up activation opportunities</li>
+          <li>Digital banner placements</li>
+          <li>Event co-sponsorship</li>
+          <li>Sampling &amp; experiential</li>
+          <li>Seasonal campaign inclusion</li>
+        </ul>
+        <a href="#contact" class="btn btn--outline mt-8" style="width:100%;justify-content:center;">Contact Us</a>
+      </div>
+    </div>
+    <div class="text-center mt-12 reveal">
+      <p class="body-md text-grey mb-6">Audience reaches 40M+ consumers annually across all demographics, with 40% from out of state -- including international visitors.</p>
+      <a href="#contact" class="btn btn--outline">Download Sponsorship Kit</a>
+    </div>
+  </div>
+</section>
+
+<!-- -- LEASING ------------------------------------------------- -->
+<section id="leasing" class="section">
+  <div class="container">
+    <div class="reveal">
+      <div class="section-label"><span class="caption">Leasing Opportunities</span></div>
+      <h2 class="display-md mb-6">Find Your<br /><em>Perfect Space.</em></h2>
+      <p class="body-lg mb-12" style="max-width:600px;">Whether you're a global luxury flagship or an emerging brand looking to test a market, Mall of America has the right space, the right foot traffic, and the right audience for your goals.</p>
+    </div>
+    <div class="leasing-tabs">
+      <button class="leasing-tab active" data-tab="luxury">Luxury Flagship</button>
+      <button class="leasing-tab" data-tab="retail">Mid-Tier Retail</button>
+      <button class="leasing-tab" data-tab="fb">Food &amp; Beverage</button>
+      <button class="leasing-tab" data-tab="popup">Pop-Up &amp; Experiential</button>
+    </div>
+    <div id="panel-luxury" class="leasing-panel active">
+      <img src="assets/images/luxury_retail.png" alt="Luxury Flagship Space" loading="lazy" />
+      <div class="leasing-info reveal-right">
+        <h3>Luxury Flagship</h3>
+        <p>Establish your luxury flagship in the highest-traffic premium retail destination in the Midwest. Our curated luxury wing offers the architectural grandeur and clientele your brand demands. Join a curated roster of best-in-class brands in an environment designed to elevate your positioning.</p>
+        <ul class="leasing-perks">
+          <li>Premium wing location with dedicated luxury entrance</li>
+          <li>White-glove concierge services for VIP clientele</li>
+          <li>Flexible 2,000-20,000 sqft configurations</li>
+          <li>Custom build-out support &amp; design collaboration</li>
+          <li>Co-marketing with MOA luxury programming</li>
+        </ul>
+        <a href="#contact" class="btn btn--primary">Inquire About Space</a>
+      </div>
+    </div>
+    <div id="panel-retail" class="leasing-panel">
+      <img src="assets/images/hero_atrium.png" alt="Mid-Tier Retail" loading="lazy" />
+      <div class="leasing-info reveal-right">
+        <h3>Mid-Tier Retail</h3>
+        <p>Position your brand in the busiest corridors of North America's most-visited mall. With 40M+ annual visitors and dwell times averaging 3+ hours, your store becomes a top-performing location in any portfolio.</p>
+        <ul class="leasing-perks">
+          <li>Prime corridor &amp; anchor-adjacent positioning</li>
+          <li>500-8,000 sqft flexible formats</li>
+          <li>Integrated digital advertising on MOA platforms</li>
+          <li>Access to consumer traffic data &amp; insights</li>
+          <li>Dedicated tenant success team</li>
+        </ul>
+        <a href="#contact" class="btn btn--primary">Inquire About Space</a>
+      </div>
+    </div>
+    <div id="panel-fb" class="leasing-panel">
+      <img src="assets/images/dining_lifestyle.png" alt="Food and Beverage" loading="lazy" />
+      <div class="leasing-info reveal-right">
+        <h3>Food &amp; Beverage</h3>
+        <p>Join a thriving culinary destination where dining is an experience, not an afterthought. From fast-casual concepts to full-service restaurants, MOA's F&B environment generates industry-leading sales per square foot.</p>
+        <ul class="leasing-perks">
+          <li>Food court, inline, and standalone restaurant formats</li>
+          <li>Dedicated food hall district positioning</li>
+          <li>High-visibility locations near entertainment anchors</li>
+          <li>Event catering partnership opportunities</li>
+          <li>Co-branded seasonal promotions</li>
+        </ul>
+        <a href="#contact" class="btn btn--primary">Inquire About Space</a>
+      </div>
+    </div>
+    <div id="panel-popup" class="leasing-panel">
+      <img src="assets/images/leasing_popup.png" alt="Pop-Up Space" loading="lazy" />
+      <div class="leasing-info reveal-right">
+        <h3>Pop-Up &amp; Experiential</h3>
+        <p>Test a new market, launch a product, or create a cultural moment. MOA's flexible pop-up program lets emerging brands and global icons access millions of consumers on short-term, high-impact terms.</p>
+        <ul class="leasing-perks">
+          <li>Flexible lease terms: 1 week to 6 months</li>
+          <li>High-traffic rotunda and corridor placements</li>
+          <li>Full A/V and digital support available</li>
+          <li>PR amplification through MOA media channels</li>
+          <li>Convert pop-up success into permanent leasing</li>
+        </ul>
+        <a href="#contact" class="btn btn--primary">Book a Pop-Up</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- -- CONTACT / CTA ------------------------------------------- -->
+<section id="contact" class="section">
+  <div class="container--narrow">
+    <div class="contact-title reveal">
+      Let's Build<br /><em style="color:var(--clr-gold);">Together.</em>
+    </div>
+    <p class="contact-sub reveal">Whether you're leasing a flagship, activating a sponsorship, or booking a venue -- the conversation starts here.</p>
+    <form id="moa-contact-form" class="contact-form reveal">
+      <div class="form-row">
+        <div class="form-group">
+          <input type="text" id="cf-name" name="name" required placeholder=" " />
+          <label for="cf-name">Full Name</label>
+        </div>
+        <div class="form-group">
+          <input type="text" id="cf-company" name="company" required placeholder=" " />
+          <label for="cf-company">Company / Brand</label>
+        </div>
+      </div>
+      <div class="form-group">
+        <input type="email" id="cf-email" name="email" required placeholder=" " />
+        <label for="cf-email">Business Email</label>
+      </div>
+      <div class="form-group">
+        <select id="cf-type" name="inquiry_type" required>
+          <option value="" disabled selected>Select Inquiry Type</option>
+          <option value="leasing">Commercial Leasing</option>
+          <option value="sponsorship">Brand Sponsorship</option>
+          <option value="events">Event Booking</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <textarea id="cf-message" name="message" rows="4" required placeholder=" "></textarea>
+        <label for="cf-message">Message Details</label>
+      </div>
+      <button type="submit" class="btn btn--primary btn--full" id="cf-submit">
+        <span class="btn-text">Submit Inquiry</span>
+        <div class="spinner"></div>
+      </button>
+      <div id="cf-success" class="form-success" style="display:none;">
+        <span style="color:var(--clr-gold);font-size:1.5rem;display:block;margin-bottom:8px;">&#10003;</span>
+        Inquiry received. A commercial representative will be in touch shortly.
+      </div>
+    </form>
+    <div class="contact-meta reveal">
+      <div class="contact-info-item"><div class="ci-label">Address</div><div class="ci-value">60 E Broadway, Bloomington, MN 55425</div></div>
+      <div class="contact-info-item"><div class="ci-label">Phone</div><div class="ci-value">(952) 883-8800</div></div>
+      <div class="contact-info-item"><div class="ci-label">Website</div><div class="ci-value">mallofamerica.com</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- -- FOOTER -------------------------------------------------- -->
+<footer>
+  <div class="container">
+    <div class="footer-logo">MOA.</div>
+    <div class="footer-sub">Mall of America &bull; Bloomington, Minnesota &bull; Since 1992</div>
+    <div class="gold-divider--full" style="margin:24px 0;"></div>
+    <p style="font-size:0.75rem;color:var(--clr-grey-700);">This interactive sales deck is produced for commercial leasing, sponsorship, and event booking purposes. All statistics are publicly available. &copy; 2025 Mall of America.</p>
+  </div>
+</footer>
+
+<!-- ── CUSTOM CURSOR ─────────────────────────────────────────── -->
+<div id="cursor-dot"></div>
+<div id="cursor-ring"></div>
+
+<!-- ── FLOATING DOWNLOAD BUTTON ──────────────────────────────── -->
+<button id="download-deck-btn" class="download-deck-btn" aria-label="Download Executive Summary">
+  <span class="dl-icon">
+    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+      <polyline points="7 10 12 15 17 10"></polyline>
+      <line x1="12" y1="15" x2="12" y2="3"></line>
+    </svg>
+  </span>
+  <span class="dl-text">Download Deck</span>
+  <span class="dl-loading"></span>
+</button>
+
+<script src="js/main.js?v=6"></script>
+</body>
+</html>
+
