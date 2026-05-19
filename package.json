@@ -1,0 +1,15 @@
+{
+  "name": "mall-of-america-sales-deck",
+  "version": "1.0.0",
+  "description": "Interactive commercial sales deck for Mall of America",
+  "private": true,
+  "keywords": [
+    "mall",
+    "sales-deck",
+    "interactive",
+    "vanilla-js",
+    "responsive-design"
+  ],
+  "author": "Your Name",
+  "license": "MIT"
+}
