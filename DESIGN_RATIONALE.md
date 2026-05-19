@@ -236,22 +236,6 @@ Adding the scroll progress bar correlated with +18% average session time (based 
 
 ---
 
-## Deployment & Handoff
-
-### Deployment Path
-```bash
-# 1. Push to GitHub
-git add .
-git commit -m "Initial: MOA sales deck"
-git push origin main
-
-# 2. Connect to Vercel
-# → vercel.com → Import project → Select repo
-# → Automatic deploys on every push
-
-# 3. Share live URL
-# → https://mall-of-america-sales-deck.vercel.app
-```
 
 ### Maintenance
 - **CSS updates:** Zero rebuild time—refresh browser
