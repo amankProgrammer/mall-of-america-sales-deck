@@ -1,21 +1,29 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 180 180">
   <!-- Background -->
-  <rect width="180" height="180" fill="#0a0a0a"/>
+  <defs>
+    <linearGradient id="bgGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#1a1a1a;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#0a0a0a;stop-opacity:1" />
+    </linearGradient>
+  </defs>
   
-  <!-- Stylized building/mall structure in gold -->
+  <rect width="180" height="180" fill="url(#bgGradient)"/>
+  
+  <!-- Outer gold circle for emphasis -->
+  <circle cx="90" cy="90" r="82" fill="none" stroke="#d4a574" stroke-width="2.5"/>
+  
+  <!-- Stylized building/mall structure - bold towers -->
   <!-- Left tower -->
-  <rect x="40" y="50" width="25" height="85" fill="#d4a574" rx="2"/>
+  <rect x="35" y="55" width="30" height="75" fill="#d4a574" rx="3"/>
   
   <!-- Center tower (taller) -->
-  <rect x="77.5" y="35" width="25" height="100" fill="#d4a574" rx="2"/>
+  <rect x="75" y="40" width="30" height="90" fill="#d4a574" rx="3"/>
   
   <!-- Right tower -->
-  <rect x="115" y="50" width="25" height="85" fill="#d4a574" rx="2"/>
+  <rect x="115" y="55" width="30" height="75" fill="#d4a574" rx="3"/>
   
-  <!-- Accent: horizontal bar connecting towers -->
-  <rect x="40" y="45" width="100" height="3" fill="#d4a574"/>
-  
-  <!-- Dot accent below (represents activity/visitors) -->
-  <circle cx="90" cy="150" r="6" fill="#d4a574" opacity="0.8"/>
+  <!-- Accent bar (roof line) -->
+  <rect x="32" y="50" width="116" height="4" fill="#d4a574" rx="2"/>
+</svg>
 </svg>
 </svg>
