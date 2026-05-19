@@ -2,12 +2,20 @@
   <!-- Background -->
   <rect width="180" height="180" fill="#0a0a0a"/>
   
-  <!-- Gold circle accent -->
-  <circle cx="90" cy="90" r="85" fill="none" stroke="#d4a574" stroke-width="3"/>
+  <!-- Stylized building/mall structure in gold -->
+  <!-- Left tower -->
+  <rect x="40" y="50" width="25" height="85" fill="#d4a574" rx="2"/>
   
-  <!-- MOA text -->
-  <text x="90" y="110" font-family="Georgia, serif" font-size="56" font-weight="bold" fill="#d4a574" text-anchor="middle" letter-spacing="4">MOA</text>
+  <!-- Center tower (taller) -->
+  <rect x="77.5" y="35" width="25" height="100" fill="#d4a574" rx="2"/>
   
-  <!-- Dot accent -->
-  <circle cx="120" cy="95" r="5" fill="#d4a574"/>
+  <!-- Right tower -->
+  <rect x="115" y="50" width="25" height="85" fill="#d4a574" rx="2"/>
+  
+  <!-- Accent: horizontal bar connecting towers -->
+  <rect x="40" y="45" width="100" height="3" fill="#d4a574"/>
+  
+  <!-- Dot accent below (represents activity/visitors) -->
+  <circle cx="90" cy="150" r="6" fill="#d4a574" opacity="0.8"/>
+</svg>
 </svg>
