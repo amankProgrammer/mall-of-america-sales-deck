@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 180 180">
+  <!-- Background -->
+  <rect width="180" height="180" fill="#0a0a0a"/>
+  
+  <!-- Gold circle accent -->
+  <circle cx="90" cy="90" r="85" fill="none" stroke="#d4a574" stroke-width="3"/>
+  
+  <!-- MOA text -->
+  <text x="90" y="110" font-family="Georgia, serif" font-size="56" font-weight="bold" fill="#d4a574" text-anchor="middle" letter-spacing="4">MOA</text>
+  
+  <!-- Dot accent -->
+  <circle cx="120" cy="95" r="5" fill="#d4a574"/>
+</svg>
